@@ -19,7 +19,7 @@ def dataset_path(real_dataset_path: str):
     generated_data = independent_generating(real_data, size=1000)
     curdir = os.path.dirname(__file__)
     fake_data_path = os.path.join(curdir, DEFAULT_FAKE_DATA_PATH)
-    generated_data.to_csv(fake_data_path)
+    generated_data.to_csv(fake_data_path, index=False)
     return fake_data_path
 
 
