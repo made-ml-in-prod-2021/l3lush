@@ -1,0 +1,95 @@
+absl-py==0.11.0
+aiohttp==3.7.3
+alabaster==0.7.12
+alembic==1.5.4
+async-timeout==3.0.1
+atomicwrites==1.4.0
+attrs @ file:///tmp/build/80754af9/attrs_1604765588209/work
+awscli==1.19.62
+Babel==2.9.1
+botocore==1.20.62
+cachetools==4.2.1
+certifi==2020.12.5
+chardet==4.0.0
+click==7.1.2
+cliff==3.7.0
+cmaes==0.8.1
+cmd2==1.5.0
+colorama @ file:///tmp/build/80754af9/colorama_1607707115595/work
+colorlog==4.7.2
+coverage==5.5
+docutils==0.15.2
+flake8==3.9.1
+fsspec==0.8.5
+google-auth==1.26.1
+google-auth-oauthlib==0.4.2
+grpcio==1.35.0
+idna==2.10
+imagesize==1.2.0
+importlib-metadata @ file:///C:/ci/importlib-metadata_1617877486026/work
+iniconfig @ file:///home/linux1/recipes/ci/iniconfig_1610983019677/work
+Jinja2==2.11.3
+jmespath==0.10.0
+joblib @ file:///tmp/build/80754af9/joblib_1613502643832/work
+Mako==1.1.4
+Markdown==3.3.3
+MarkupSafe==1.1.1
+marshmallow==3.11.1
+marshmallow-dataclass==8.4.1
+mccabe==0.6.1
+mkl-fft==1.3.0
+mkl-random @ file:///C:/ci/mkl_random_1618854593605/work
+mkl-service==2.3.0
+more-itertools @ file:///tmp/build/80754af9/more-itertools_1613676688952/work
+multidict==5.1.0
+mypy-extensions==0.4.3
+numpy==1.20.2
+oauthlib==3.1.0
+optuna==2.5.0
+packaging @ file:///tmp/build/80754af9/packaging_1611952188834/work
+pandas @ file:///C:/ci/pandas_1618365631664/work
+pluggy @ file:///C:/ci/pluggy_1615976530170/work
+prettytable==2.0.0
+protobuf==3.14.0
+py @ file:///tmp/build/80754af9/py_1607971587848/work
+pyasn1==0.4.8
+pyasn1-modules==0.2.8
+pycodestyle==2.7.0
+pyflakes==2.3.1
+Pygments==2.8.1
+pyparsing @ file:///home/linux1/recipes/ci/pyparsing_1610983426697/work
+pyperclip==1.8.1
+pytest==6.2.3
+python-dateutil @ file:///home/ktietz/src/ci/python-dateutil_1611928101742/work
+python-dotenv==0.17.1
+python-editor==1.0.4
+pytorch-lightning==1.1.8
+pytz @ file:///tmp/build/80754af9/pytz_1612215392582/work
+PyYAML==5.4.1
+requests==2.25.1
+requests-oauthlib==1.3.0
+rsa==4.7.1
+s3transfer==0.4.2
+scikit-learn==0.24.2
+scipy==1.6.3
+six @ file:///C:/ci/six_1605205426665/work
+sklearn==0.0
+snowballstemmer==2.1.0
+Sphinx==3.5.4
+sphinxcontrib-applehelp==1.0.2
+sphinxcontrib-devhelp==1.0.2
+sphinxcontrib-htmlhelp==1.0.3
+sphinxcontrib-jsmath==1.0.1
+sphinxcontrib-qthelp==1.0.3
+sphinxcontrib-serializinghtml==1.1.4
+-e git+https://github.com/made-ml-in-prod-2021/l3lush@442e5c6f501218e1c1553a6fd1f2da238cc42297#egg=src&subdirectory=ml_project
+tensorboard==2.4.1
+tensorboard-plugin-wit==1.8.0
+threadpoolctl @ file:///tmp/tmp9twdgx9k/threadpoolctl-2.1.0-py3-none-any.whl
+toml @ file:///tmp/build/80754af9/toml_1616166611790/work
+typing-extensions==3.10.0.0
+typing-inspect==0.6.0
+urllib3==1.26.4
+wincertstore==0.2
+yarl==1.6.3
+zipp @ file:///tmp/build/80754af9/zipp_1615904174917/work
