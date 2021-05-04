@@ -1,95 +1,86 @@
-absl-py==0.11.0
-aiohttp==3.7.3
-alabaster==0.7.12
-alembic==1.5.4
-async-timeout==3.0.1
-atomicwrites==1.4.0
-attrs @ file:///tmp/build/80754af9/attrs_1604765588209/work
-awscli==1.19.62
-Babel==2.9.1
-botocore==1.20.62
-cachetools==4.2.1
-certifi==2020.12.5
-chardet==4.0.0
-click==7.1.2
-cliff==3.7.0
-cmaes==0.8.1
-cmd2==1.5.0
-colorama @ file:///tmp/build/80754af9/colorama_1607707115595/work
-colorlog==4.7.2
-coverage==5.5
-docutils==0.15.2
-flake8==3.9.1
-fsspec==0.8.5
-google-auth==1.26.1
-google-auth-oauthlib==0.4.2
-grpcio==1.35.0
-idna==2.10
-imagesize==1.2.0
-importlib-metadata @ file:///C:/ci/importlib-metadata_1617877486026/work
-iniconfig @ file:///home/linux1/recipes/ci/iniconfig_1610983019677/work
-Jinja2==2.11.3
-jmespath==0.10.0
-joblib @ file:///tmp/build/80754af9/joblib_1613502643832/work
-Mako==1.1.4
-Markdown==3.3.3
-MarkupSafe==1.1.1
-marshmallow==3.11.1
-marshmallow-dataclass==8.4.1
-mccabe==0.6.1
-mkl-fft==1.3.0
-mkl-random @ file:///C:/ci/mkl_random_1618854593605/work
-mkl-service==2.3.0
-more-itertools @ file:///tmp/build/80754af9/more-itertools_1613676688952/work
-multidict==5.1.0
-mypy-extensions==0.4.3
-numpy==1.20.2
-oauthlib==3.1.0
-optuna==2.5.0
-packaging @ file:///tmp/build/80754af9/packaging_1611952188834/work
-pandas @ file:///C:/ci/pandas_1618365631664/work
-pluggy @ file:///C:/ci/pluggy_1615976530170/work
-prettytable==2.0.0
-protobuf==3.14.0
-py @ file:///tmp/build/80754af9/py_1607971587848/work
-pyasn1==0.4.8
-pyasn1-modules==0.2.8
-pycodestyle==2.7.0
-pyflakes==2.3.1
-Pygments==2.8.1
-pyparsing @ file:///home/linux1/recipes/ci/pyparsing_1610983426697/work
-pyperclip==1.8.1
-pytest==6.2.3
-python-dateutil @ file:///home/ktietz/src/ci/python-dateutil_1611928101742/work
-python-dotenv==0.17.1
-python-editor==1.0.4
-pytorch-lightning==1.1.8
-pytz @ file:///tmp/build/80754af9/pytz_1612215392582/work
-PyYAML==5.4.1
-requests==2.25.1
-requests-oauthlib==1.3.0
-rsa==4.7.1
-s3transfer==0.4.2
-scikit-learn==0.24.2
-scipy==1.6.3
-six @ file:///C:/ci/six_1605205426665/work
-sklearn==0.0
-snowballstemmer==2.1.0
-Sphinx==3.5.4
-sphinxcontrib-applehelp==1.0.2
-sphinxcontrib-devhelp==1.0.2
-sphinxcontrib-htmlhelp==1.0.3
-sphinxcontrib-jsmath==1.0.1
-sphinxcontrib-qthelp==1.0.3
-sphinxcontrib-serializinghtml==1.1.4
--e git+https://github.com/made-ml-in-prod-2021/l3lush@442e5c6f501218e1c1553a6fd1f2da238cc42297#egg=src&subdirectory=ml_project
-tensorboard==2.4.1
-tensorboard-plugin-wit==1.8.0
-threadpoolctl @ file:///tmp/tmp9twdgx9k/threadpoolctl-2.1.0-py3-none-any.whl
-toml @ file:///tmp/build/80754af9/toml_1616166611790/work
-typing-extensions==3.10.0.0
-typing-inspect==0.6.0
-urllib3==1.26.4
-wincertstore==0.2
-yarl==1.6.3
-zipp @ file:///tmp/build/80754af9/zipp_1615904174917/work
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file>
+# platform: win-64
+alabaster=0.7.12=pypi_0
+atomicwrites=1.4.0=py_0
+attrs=20.3.0=pyhd3eb1b0_0
+awscli=1.19.62=pypi_0
+babel=2.9.1=pypi_0
+blas=1.0=mkl
+botocore=1.20.62=pypi_0
+ca-certificates=2021.4.13=haa95532_1
+certifi=2020.12.5=py37haa95532_0
+chardet=4.0.0=pypi_0
+click=7.1.2=pypi_0
+colorama=0.4.3=pypi_0
+coverage=5.5=pypi_0
+docutils=0.15.2=pypi_0
+flake8=3.9.1=pypi_0
+icc_rt=2019.0.0=h0cc432a_1
+idna=2.10=pypi_0
+imagesize=1.2.0=pypi_0
+importlib-metadata=3.10.0=py37haa95532_0
+importlib_metadata=3.10.0=hd3eb1b0_0
+iniconfig=1.1.1=pyhd3eb1b0_0
+intel-openmp=2021.2.0=haa95532_616
+jinja2=2.11.3=pypi_0
+jmespath=0.10.0=pypi_0
+joblib=1.0.1=pyhd3eb1b0_0
+markupsafe=1.1.1=pypi_0
+marshmallow=3.11.1=pypi_0
+marshmallow-dataclass=8.4.1=pypi_0
+mccabe=0.6.1=pypi_0
+mkl=2021.2.0=haa95532_296
+mkl-service=2.3.0=py37h2bbff1b_1
+mkl_fft=1.3.0=py37h277e83a_2
+mkl_random=1.2.1=py37hf11a4ad_2
+more-itertools=8.7.0=pyhd3eb1b0_0
+mypy-extensions=0.4.3=pypi_0
+numpy=1.20.2=pypi_0
+numpy-base=1.20.1=py37haf7ebc8_0
+openssl=1.1.1k=h2bbff1b_0
+packaging=20.9=pyhd3eb1b0_0
+pandas=1.2.4=py37hd77b12b_0
+pip=21.0.1=py37haa95532_0
+pluggy=0.13.1=py37haa95532_0
+py=1.10.0=pyhd3eb1b0_0
+pyasn1=0.4.8=pypi_0
+pycodestyle=2.7.0=pypi_0
+pyflakes=2.3.1=pypi_0
+pygments=2.8.1=pypi_0
+pyparsing=2.4.7=pyhd3eb1b0_0
+pytest=6.2.3=py37haa95532_2
+python=3.7.1=h8c8aaf0_6
+python-dateutil=2.8.1=pyhd3eb1b0_0
+python-dotenv=0.17.1=pypi_0
+pytz=2021.1=pyhd3eb1b0_0
+pyyaml=5.4.1=pypi_0
+requests=2.25.1=pypi_0
+rsa=4.7.2=pypi_0
+s3transfer=0.4.2=pypi_0
+scikit-learn=0.24.2=pypi_0
+scipy=1.6.3=pypi_0
+setuptools=52.0.0=py37haa95532_0
+six=1.15.0=py37haa95532_0
+sklearn=0.0=pypi_0
+snowballstemmer=2.1.0=pypi_0
+sphinx=3.5.4=pypi_0
+sphinxcontrib-applehelp=1.0.2=pypi_0
+sphinxcontrib-devhelp=1.0.2=pypi_0
+sphinxcontrib-htmlhelp=1.0.3=pypi_0
+sphinxcontrib-jsmath=1.0.1=pypi_0
+sphinxcontrib-qthelp=1.0.3=pypi_0
+sphinxcontrib-serializinghtml=1.1.4=pypi_0
+sqlite=3.35.4=h2bbff1b_0
+src=0.1.0=dev_0
+threadpoolctl=2.1.0=pyh5ca1d4c_0
+toml=0.10.2=pyhd3eb1b0_0
+typing-extensions=3.10.0.0=pypi_0
+typing-inspect=0.6.0=pypi_0
+typing_extensions=3.7.4.3=pyha847dfd_0
+urllib3=1.26.4=pypi_0
+vc=14.2=h21ff451_1
+vs2015_runtime=14.27.29016=h5e58377_2
+wheel=0.36.2=pyhd3eb1b0_0
+wincertstore=0.2=py37_0
+zipp=3.4.1=pyhd3eb1b0_0
