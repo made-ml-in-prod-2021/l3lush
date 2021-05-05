@@ -8,8 +8,8 @@ Installation:
 git clone --branch homework1 https://github.com/made-ml-in-prod-2021/l3lush.git
 cd l3lush/ml_project
 python -m venv .venv
-source .venv/bin/activate
-python setup.py install
+source .venv/bin/activate OR source .venv/Scripts/activate
+python -m setup.py install
 pip install -r requirements.txt
 ~~~
 Usage:
@@ -20,7 +20,7 @@ python src/test_predict.py configs/test_config.yaml      -- test
 
 Test:
 ~~~
-pytest tests/
+python -m pytest tests/ OR pytest tests/
 ~~~
 
 Project Organization
