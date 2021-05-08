@@ -1,4 +1,4 @@
-input_data_path: "tests/fake_data.csv"
+input_data_path: "data/raw/heart.csv"
 input_model_path: "models/model_forest.pkl"
 output_predict_path: "data/processed/predict.csv"
 feature_params:

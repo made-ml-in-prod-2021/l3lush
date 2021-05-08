@@ -10,8 +10,7 @@ from enities.train_pipeline_params import (
     TrainingPipelineParams,
     read_training_pipeline_params,
 )
-from src.features import make_features
-from src.features.build_features import extract_target, build_transformer
+from src.features.build_features import extract_target, CustomTransformer
 from src.models.train_model import train_model
 from src.models.serialize_model import serialize_model
 from src.models.predict_model import predict_model
@@ -33,9 +32,9 @@ def train_pipeline(training_pipeline_params: TrainingPipelineParams):
     logger.info(f"train_df.shape is {train_df.shape}")
     logger.info(f"val_df.shape is {val_df.shape}")
 
-    transformer = build_transformer(training_pipeline_params.feature_params)
+    transformer = CustomTransformer(training_pipeline_params.feature_params)
     transformer.fit(train_df)
-    train_features = make_features(transformer, train_df)
+    train_features = transformer.transform(train_df)
     train_target = extract_target(train_df, training_pipeline_params.feature_params)
 
     logger.info(f"train_features.shape is {train_features.shape}")
@@ -43,8 +42,7 @@ def train_pipeline(training_pipeline_params: TrainingPipelineParams):
     model = train_model(
         train_features, train_target, training_pipeline_params.train_params
     )
-
-    val_features = make_features(transformer, val_df)
+    val_features = transformer.transform(val_df)
     val_target = extract_target(val_df, training_pipeline_params.feature_params)
 
     val_features_prepared = prepare_val_features_for_predict(

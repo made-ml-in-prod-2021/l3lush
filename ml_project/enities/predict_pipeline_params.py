@@ -6,17 +6,17 @@ from .feature_params import FeatureParams
 
 
 @dataclass()
-class TestPipelineParams:
+class PredictPipelineParams:
     input_data_path: str
     input_model_path: str
     output_predict_path: str
     feature_params: FeatureParams
 
 
-TestPipelineParamsSchema = class_schema(TestPipelineParams)
+PredictPipelineParamsSchema = class_schema(PredictPipelineParams)
 
 
-def read_test_pipeline_params(path: str) -> TestPipelineParams:
+def read_predict_pipeline_params(path: str) -> PredictPipelineParams:
     with open(path, "r") as input_stream:
-        schema = TestPipelineParamsSchema()
+        schema = PredictPipelineParamsSchema()
         return schema.load(yaml.safe_load(input_stream))
