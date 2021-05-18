@@ -22,6 +22,11 @@ tests
 pytest tests/ OR python -m pytest tests/
 ~~~
 
+docker creation
+~~~
+docker build -t l3lush/online_inference:v1 .
+~~~
+
 Project Organization
 ------------
 
