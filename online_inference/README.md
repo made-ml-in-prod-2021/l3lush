@@ -5,7 +5,7 @@ Repo for homework2
 
 ~~~
 git clone --branch homework2 https://github.com/made-ml-in-prod-2021/l3lush.git
-cd l3lush/ml_project
+cd l3lush/online_inference
 
 docker pull l3lush/online_inference:v1 
 docker run -p 8000:8000 l3lush/online_inference:v1
