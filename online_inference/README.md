@@ -6,9 +6,14 @@ Repo for homework2
 ~~~
 git clone --branch homework2 https://github.com/made-ml-in-prod-2021/l3lush.git
 cd l3lush/ml_project
+
 docker pull l3lush/online_inference:v1 
 docker run -p 8000:8000 l3lush/online_inference:v1
 
+python -m venv .venv
+source .venv/bin/activate OR source .venv/Scripts/activate
+python -m setup.py install
+pip install -r requirements.txt
 python src/make_request.py
 ~~~
 
