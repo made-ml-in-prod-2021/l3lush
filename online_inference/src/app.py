@@ -40,6 +40,7 @@ def make_predict(
     data: List, features: List[str], params: AppParams
 ) -> List[TargetResponse]:
     data = pd.DataFrame(data, columns=features)
+    logger.info(f'got input data with shape {data.shape}')
     ids = [int(x) for x in data.index]
     model = load_object(params.model)
     transformer: CustomTransformer = load_object(params.transformer)
@@ -47,6 +48,7 @@ def make_predict(
     X = data[features_]
     X = transformer.transform(X)
     predicts = model.predict(X)
+    logger.info(f'output with shape: {X.shape}')
     return [
         TargetResponse(id=id_, target=float(price)) for id_, price in zip(ids, predicts)
     ]

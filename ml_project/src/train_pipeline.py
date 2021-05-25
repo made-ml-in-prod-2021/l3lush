@@ -1,6 +1,7 @@
 import json
 import logging
 import sys
+import pickle
 
 import click
 import pandas as pd
@@ -36,6 +37,9 @@ def train_pipeline(training_pipeline_params: TrainingPipelineParams):
     transformer.fit(train_df)
     train_features = transformer.transform(train_df)
     train_target = extract_target(train_df, training_pipeline_params.feature_params)
+
+    with open('models/transformer.pkl', 'wb') as fin:
+        pickle.dump(transformer, fin)
 
     logger.info(f"train_features.shape is {train_features.shape}")
 
