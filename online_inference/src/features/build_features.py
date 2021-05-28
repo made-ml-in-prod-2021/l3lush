@@ -5,7 +5,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.base import BaseEstimator, TransformerMixin
 
-from enities.feature_params import FeatureParams
+from src.enities.feature_params import FeatureParams
 
 
 class CustomTransformer(BaseEstimator, TransformerMixin):
@@ -36,13 +36,4 @@ class CustomTransformer(BaseEstimator, TransformerMixin):
         X_[self.params.numerical_features] = self.numerical_pipeline.transform(X_[self.params.numerical_features])
         X_[new_categorical_cols] = self.categorical_pipeline.transform(X_[self.params.categorical_features]).toarray()
         X_.drop(self.params.categorical_features, axis=1, inplace=True)
-        if self.params.target_col in X_.columns:
-            X_.drop(self.params.target_col, axis=1, inplace=True)
         return X_
-
-
-def extract_target(df: pd.DataFrame, params: FeatureParams) -> pd.Series:
-    target = df[params.target_col]
-    if params.use_log_trick:
-        target = pd.Series(np.log(target.to_numpy()))
-    return target
