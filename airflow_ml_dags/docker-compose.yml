@@ -8,7 +8,7 @@ x-environment: &airflow_environment
   - AIRFLOW__CORE__STORE_DAG_CODE=True
   - AIRFLOW__CORE__STORE_SERIALIZED_DAGS=True
   - AIRFLOW__WEBSERVER__EXPOSE_CONFIG=True
-  - AIRFLOW__CORE__FERNET_KEY='BrF4r_gSvxQluH0zai3OHb4bd6Gyh25Zj2ik7PHIygg='
+  - AIRFLOW__CORE__FERNET_KEY=8GT5tZo7XQNer9q655rpo4moqlSBa-JN9jL5zFZ-8LA=
 
 
 x-airflow-image: &airflow_image apache/airflow:2.0.0-python3.6
@@ -32,7 +32,7 @@ services:
       - postgres
     environment: *airflow_environment
     entrypoint: /bin/bash
-    command: -c 'airflow db init && airflow users create --username admin --password admin --firstname Anonymous --lastname Admin --role Admin --email admin@example.org'
+    command: -c 'airflow db init && airflow users create --username admin --password admin --firstname Anonymous --lastname Admin --role Admin --email admin@example.org && airflow connections add fs_default --conn-type fs'
 
   webserver:
     build:
