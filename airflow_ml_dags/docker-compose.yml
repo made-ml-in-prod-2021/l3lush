@@ -3,12 +3,12 @@ version: '3.7'
 x-environment: &airflow_environment
   - AIRFLOW__CORE__EXECUTOR=LocalExecutor
   - AIRFLOW__CORE__LOAD_DEFAULT_CONNECTIONS=False
-  - AIRFLOW__CORE__LOAD_EXAMPLES=True
+  - AIRFLOW__CORE__LOAD_EXAMPLES=False
   - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql://airflow:airflow@postgres:5432/airflow
   - AIRFLOW__CORE__STORE_DAG_CODE=True
   - AIRFLOW__CORE__STORE_SERIALIZED_DAGS=True
   - AIRFLOW__WEBSERVER__EXPOSE_CONFIG=True
-  - AIRFLOW__CORE__FERNET_KEY=8GT5tZo7XQNer9q655rpo4moqlSBa-JN9jL5zFZ-8LA=
+#  - AIRFLOW__CORE__FERNET_KEY="8GT5tZo7XQNer9q655rpo4moqlSBa-JN9jL5zFZ-8LA="
 
 
 x-airflow-image: &airflow_image apache/airflow:2.0.0-python3.6
@@ -103,6 +103,12 @@ services:
     build:
       context: images/airflow-validate
     image: airflow-validate
+    restart: "no"
+
+  split_data:
+    build:
+      context: images/airflow-split-data
+    image: airflow-split-data
     restart: "no"
 
 volumes:

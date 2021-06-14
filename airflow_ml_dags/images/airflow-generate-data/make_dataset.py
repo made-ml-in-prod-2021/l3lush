@@ -7,7 +7,7 @@ import os
 @click.command('generate_data')
 @click.argument('output_dir')
 def generate_data(output_dir: str):
-    X, y = make_blobs(n_samples=500, n_features=5, centers=2, random_state=17)
+    X, y = make_blobs(n_samples=10, n_features=5, centers=2, random_state=17)
     print(os.path.realpath(__file__))
     os.makedirs(output_dir, exist_ok=True)
 

@@ -6,12 +6,12 @@ import pickle
 
 
 @click.command('train_model')
-@click.command('processed_data_dir')
-@click.command('models_dir')
+@click.argument('processed_data_dir')
+@click.argument('models_dir')
 def train_model(processed_data_dir: str, models_dir: str):
     train = pd.read_csv(os.path.join(processed_data_dir, 'train.csv'))
-    X_train = train.drop(['target'], axis=1)
-    y_train = train['target']
+    X_train = train.iloc[:, :-1]
+    y_train = train.iloc[:, -1]
 
     forest = RandomForestClassifier(n_estimators=10)
     forest.fit(X_train, y_train)

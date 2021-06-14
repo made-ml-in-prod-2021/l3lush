@@ -8,12 +8,12 @@ import json
 
 
 @click.command('validate')
-@click.command('processed_data_dir')
-@click.command('models_dir')
+@click.argument('processed_data_dir')
+@click.argument('models_dir')
 def validate_model(processed_data_dir: str, models_dir: str):
     test = pd.read_csv(os.path.join(processed_data_dir, 'test.csv'))
-    X_test = test.drop(['target'], axis=1)
-    y_test = test['target']
+    X_test = test.iloc[:, :-1]
+    y_test = test.iloc[:, -1]
 
     with open(os.path.join(models_dir, 'model.pkl'), 'rb') as fin:
         forest: RandomForestClassifier = pickle.load(fin)

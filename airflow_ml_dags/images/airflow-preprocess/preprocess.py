@@ -15,10 +15,11 @@ def preprocess_data(raw_data_dir: str, processed_data_dir: str):
     features_transformed = pd.DataFrame(scaler.fit_transform(features), columns=features.columns)
 
     joined_data = pd.concat([features_transformed, target], axis=1)
-    joined_data.to_csv(os.path.join(processed_data_dir, 'processed_data.csv'), index=False)
-
+    print(features_transformed.shape, target.shape, joined_data.shape)
     if not os.path.exists(processed_data_dir):
         os.makedirs(processed_data_dir)
+
+    joined_data.to_csv(os.path.join(processed_data_dir, 'processed_data.csv'), index=False)
 
     with open(os.path.join(processed_data_dir, 'scaler.pkl'), 'wb') as fin:
         pickle.dump(scaler, fin)
